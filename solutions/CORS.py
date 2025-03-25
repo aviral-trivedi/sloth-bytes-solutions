@@ -32,6 +32,7 @@ def bridgeShuffle(array1: list,array2: list):
                 no_error_2 = False 
     
     print(shuffled_array)
+    return shuffled_array
 
 
 bridgeShuffle(["A", "A", "A"], ["B", "B", "B"])

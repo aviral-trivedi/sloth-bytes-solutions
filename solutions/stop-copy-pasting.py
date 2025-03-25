@@ -16,6 +16,7 @@ def turnCalc(number):
         turned_num += data_table[int(digit)]
 
     #Since `turned_num` is a string we flip the result in the end
+    print(turned_num[::-1])
     return turned_num[::-1]
 
 print(turnCalc('07734'))
