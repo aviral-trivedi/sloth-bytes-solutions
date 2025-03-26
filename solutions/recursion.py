@@ -7,7 +7,7 @@ def remove_virus(virus_text: str):
         virus_text (str) : the string of text to remove virusus from
     
     Returns:
-
+        checked_data (str) : the string in format 'PC Files: <names_of_files>'
     """
 
     excluded_names = ("antivirus", "notvirus")
@@ -22,8 +22,8 @@ def remove_virus(virus_text: str):
             clean_files.append(file_name)
     
     checked_data = f"PC Files: {' '.join(clean_files)}"
-
     print(checked_data)
+    return checked_data
 
 
 

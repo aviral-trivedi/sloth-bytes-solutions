@@ -1,0 +1,40 @@
+def doesRhyme(line1 : str, line2 : str):
+    """
+    Checks for rhyming sentence according that last words contains same vowels
+
+    Args:
+        line1 (str) : the first line to check
+        line2 (str) : the second line to check
+
+    Returns:
+        bool value : True or False
+    """
+
+    vowel1 = {"a":0, "e":0, "i":0, "o":0, "u":0}
+    vowel2 = {"a":0, "e":0, "i":0, "o":0, "u":0}
+
+    for letter in line1.lower().split()[-1]:
+        try: vowel1[letter] += 1
+        except Exception: pass
+
+    for letter in line2.lower().split()[-1]:
+        try: vowel2[letter] += 1
+        except Exception: pass
+    
+    if vowel1 == vowel2:
+        print(True)
+        return True
+    print(False)
+    return False
+
+doesRhyme("Sam I am!", "Green eggs and ham.")
+doesRhyme("Sam I am!", "Green eggs and HAM.")
+# Capitalization and punctuation should not matter.
+doesRhyme("You're built like a seat", "I bet you like to eat")
+doesRhyme("You are off to the races", "a splendid day.")
+doesRhyme("and frequently do?", "you gotta move.")
+output = True
+output = True
+output = True
+output = False
+output = False
